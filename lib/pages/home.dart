@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.red[400],
         elevation: 0
       ),
-      body: Text("body here")
+      body: Center(child: Text("body here"))
     );
   }
 }

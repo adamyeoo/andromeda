@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:andromeda/pages/home.dart';
 import 'package:andromeda/pages/map_ui.dart';
 import 'package:andromeda/pages/notification.dart';
-import 'package:andromeda/pages/user_profile.dart';
+import 'package:andromeda/pages/messages.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -10,9 +10,8 @@ void main() {
     // '/': (context) => Loading() // when adding loading page
     '/home': (context) => Home(),
     '/map_ui': (context) => MapUI(),
-    //'/messages': (context) => Messages(),
     '/notifications': (context) => Notifications(),
-    '/my_profile': (context) => Profile()
+    '/messages': (context) => Messages(),
     },
     home: BotNavBar()
   ));
@@ -33,10 +32,10 @@ class _BotNavBarState extends State<BotNavBar> {
 
   int currentIndex = 0; // which icon clicked on navigation bar
   final List<Widget> screenPages = [ // fix to routing later
-    Home(),
     MapUI(),
+    Home(),
     Notifications(),
-    Profile()
+    Messages()
   ];
 
   @override
@@ -54,15 +53,15 @@ class _BotNavBarState extends State<BotNavBar> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.map
             ),
             label: 'Explore',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home
+            ),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -74,7 +73,7 @@ class _BotNavBarState extends State<BotNavBar> {
             icon: Icon(
               Icons.account_box
             ),
-            label: 'My Profile',
+            label: 'Messages',
           )
         ],
       ),

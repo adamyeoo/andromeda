@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({ Key? key }) : super(key: key);
+class Messages extends StatefulWidget {
+  const Messages({ Key? key }) : super(key: key);
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<Messages> createState() => _MessagesState();
 }
 
-class _ProfileState extends State<Profile> {
+class _MessagesState extends State<Messages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "My Profile",
+          "Messages",
           style: TextStyle(
             color: Colors.grey[100],
             fontSize: 25,
@@ -23,7 +23,7 @@ class _ProfileState extends State<Profile> {
         backgroundColor: Colors.red[400],
         elevation: 0
       ),
-      body: Text("body here")
+      body: Center(child: Text("body here"))
     );
   }
 }

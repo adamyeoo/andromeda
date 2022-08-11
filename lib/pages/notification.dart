@@ -23,7 +23,7 @@ class _NotificationsState extends State<Notifications> {
         backgroundColor: Colors.red[400],
         elevation: 0
       ),
-      body: Text("body here")
+      body: Center(child: Text("body here"))
     );
   }
 }
